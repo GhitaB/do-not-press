@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Do Not Press The Button</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game" aria-live="polite">
+      <div class="status">
+        <div class="timer" role="status">
+          <span class="label">Time left</span>
+          <span id="countdown" class="value">60</span>
+          <span class="unit">seconds</span>
+        </div>
+        <div id="taunt" class="taunt">Do not press that button. Seriously.</div>
+      </div>
+
+      <button id="dangerButton" class="danger" type="button" aria-describedby="taunt">
+        DO NOT PRESS
+      </button>
+
+      <div id="noise" class="noise" aria-hidden="true"></div>
+
+      <section id="finalMessage" class="final" aria-live="assertive" hidden>
+        <h1 id="finalTitle"></h1>
+        <p id="finalBody"></p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
